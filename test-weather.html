@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-size: 12px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Weather API Test</h1>
+        
+        <input type="text" id="cityInput" placeholder="Masukkan nama kota..." value="Jakarta">
+        <button onclick="testWeather()">Test API</button>
+        <button onclick="clearLog()">Clear Log</button>
+        
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        const API_KEY = '9505fd1df737e20152fbd78cdb289b6a';
+        const API_URL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' + API_KEY;
+        
+        function log(message, type = 'normal') {
+            const output = document.getElementById('output');
+            const timestamp = new Date().toLocaleTimeString();
+            const prefix = type === 'success' ? '✓' : type === 'error' ? '✗' : '→';
+            const className = type === 'success' ? 'success' : type === 'error' ? 'error' : '';
+            
+            output.innerHTML += `<span class="${className}">[${timestamp}] ${prefix} ${message}</span>\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        function clearLog() {
+            document.getElementById('output').innerHTML = '';
+        }
+        
+        async function testWeather() {
+            const city = document.getElementById('cityInput').value;
+            if (!city) {
+                log('Masukkan nama kota!', 'error');
+                return;
+            }
+            
+            log(`Testing API untuk kota: ${city}`, 'normal');
+            log(`URL: ${API_URL}&q=${city}`, 'normal');
+            
+            try {
+                const response = await fetch(API_URL + '&q=' + city);
+                log(`Status: ${response.status}`, response.ok ? 'success' : 'error');
+                
+                const data = await response.json();
+                log(`Response berhasil diterima`, 'success');
+                
+                if (data.cod == 200) {
+                    log(`Kota: ${data.name}, ${data.sys.country}`, 'success');
+                    log(`Suhu: ${data.main.temp}°C`, 'success');
+                    log(`Deskripsi: ${data.weather[0].description}`, 'success');
+                    log(`Clouds: ${data.clouds.all}%`, 'success');
+                    log(`Humidity: ${data.main.humidity}%`, 'success');
+                    log(`Pressure: ${data.main.pressure} hPa`, 'success');
+                    log(`Wind Speed: ${data.wind.speed} m/s`, 'success');
+                    log(`Visibility: ${(data.visibility/1000).toFixed(1)} km`, 'success');
+                    log(`Feels Like: ${data.main.feels_like}°C`, 'success');
+                    log(`Temp Max: ${data.main.temp_max}°C`, 'success');
+                    log(`Temp Min: ${data.main.temp_min}°C`, 'success');
+                    log(`Coordinates: ${data.coord.lat}, ${data.coord.lon}`, 'success');
+                    
+                    log('\n=== FULL DATA ===', 'normal');
+                    log(JSON.stringify(data, null, 2), 'normal');
+                } else {
+                    log(`Error: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                log(`Fetch Error: ${error.message}`, 'error');
+                log(error.stack, 'error');
+            }
+        }
+        
+        // Test otomatis saat halaman load
+        window.addEventListener('load', () => {
+            log('Halaman loaded, siap untuk test');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    
+    <!-- --------- Font awesome ---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+      <!-- --------- Weather ---------- -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+
+      <style type="text/css">
+        #map{
+            height: 100vh;
+            width: 100%;
+            z-index: 1;
+        }
+      </style>
+
+
+
+
+    <title>Website Banjir</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header" style="z-index: 10;">
+        <div class="nav-logo">
+            <p class="nav-name">Daniel</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Cek Cuaca</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#hubungi" class="nav-link">Hubungi</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <a class="btn" href="https://drive.google.com/uc?export=download&id=12ncJo_hhrV_3bYJZeVYHFN9MvpTcLkOE">Download Peta Banjir <i class="uil uil-file-alt"></i></a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Sistem Informasi Bencana Banjir</span>
+            </div>
+            <div class="featured-name">
+                <p>Siaga <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>Mari bersama ambil bagian dalam upaya pencegahan banjir, demi menjaga lingkungan dan masa depan 
+                    yang lebih baik bagi kita dan anak cucu kita
+                </p>
+            </div>
+            <br>
+            <br> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+ <!-- -------------- Live count ---------------- -->
+          <div class="wrapper2">
+            <div class="container2 icon">
+                <i2 class="fa-solid fa-house-flood-water"></i2>
+                <span class="num" data-val="1000">000</span>
+                <span class="text">Total Banjir 2024</span>
+
+            </div>
+
+            <div class="container2 icon">
+                <i2 class="fa-solid fa-skull"></i2>
+                <span class="num" data-val="2578">000</span>
+                <span class="text">Korban Meninggal</span>
+
+            </div>
+
+            <div class="container2 icon">
+                <i2 class="fa-solid fa-bandage"></i2>
+                <span class="num" data-val="5600">000</span>
+                <span class="text">Korban Luka</span>
+
+            </div>
+
+            
+          </div>
+ <
+            <div class="social_icons">
+                <div class="icon"><i class="uil uil-github-alt"></i></div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/avatar.png" alt="avatar">
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div>
+
+       </section>
+       
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1>Mengenal Banjir</h1>
+          </div>
+          <div class="row">
+            <div class="col pop-up">
+                <div class="about-info">
+                    <h3>Apa itu Banjir ?</h3>
+                    <p style="text-align: justify;">Banjir adalah fenomena alam yang terjadi ketika volume air yang ada di suatu tempat melebihi kapasitas normalnya, sehingga air meluap dan menggenangi area yang biasanya tidak terendam air. Banjir dapat terjadi di berbagai tempat, baik di sungai, kota, hingga lahan pertanian.
+                    </p>
+                    
+                </div>
+
+                
+            </div>
+
+                
+            
+            <div class="col pop-up">
+                <div class="about-info">
+                    <h3>Mengapa Banjir bisa terjadi ?</h3>
+                    <p style="text-align: justify;">
+                        Banjir disebabkan oleh curah hujan yang tinggi dalam waktu singkat, di mana saluran air tidak mampu menampung volume air yang masuk. Penyumbatan saluran drainase oleh sampah atau material lain juga memperparah genangan air. Penggundulan hutan mengurangi kemampuan tanah menyerap air, sehingga meningkatkan risiko banjir. Selain itu, perubahan tata guna lahan dan kenaikan permukaan laut akibat perubahan iklim turut memperburuk kondisi banjir, terutama di daerah pesisir.
+                    </p>
+                    
+                </div>
+                
+                
+                
+                
+          </div>
+       </section>
+
+    </section>
+    <!-- -------------- Dampak BOX ---------------- -->
+    <section class="section" >
+        <div class="top-header">
+            <h1>Dampak Banjir</h1>
+        </div>
+        <div class="project-container">
+          <div class="project-box">
+            <i class="fa-solid fa-road-bridge"></i>
+              <h3>Kerusakan Infrastruktur</h3>
+              <label>Banjir dapat merusak fasilitas publik</label>
+          </div>
+          <div class="project-box">
+            <i class="fa-solid fa-money-bill"></i>
+              <h3>Kerugian Ekonomi</h3>
+              <label>Ekonomi dapat terhambat karena banjir</label>
+          </div>
+          <div class="project-box">
+            <i class="fa-solid fa-seedling"></i>
+              <h3>Pencemaran Lingkungan</h3>
+              <label>Bahan Kimia dapat ikut tergenang</label>
+          </div>
+
+          <div class="project-box">
+            <i class="fa-solid fa-notes-medical"></i>
+            <h3>Gangguan Kesehatan</h3>
+            <label>Timbul penyakit seperti diare, muntaber</label>
+        </div>
+        <div class="project-box">
+            <i class="fa-solid fa-suitcase"></i>
+            <h3>Kehilangan Aset</h3>
+            <label>Barang berharga dapat hanyut terbawa</label>
+        </div>
+        <div class="project-box">
+            <i class="fa-solid fa-hippo"></i>
+            <h3>Kerusakan Habitat Hewan</h3>
+            <label>Memaksa hewan liar berpindah tempat</label>
+        </div>
+        </div>
+     </section>
+
+
+       <!-- -------------- PROJECT BOX 2 ---------------- -->
+
+       <section class="section" >
+          <div class="top-header">
+              <h1>Mitigasi</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box2">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Pembangunan Drainase</h3>
+                <label>Untuk memperlancar aliran air</label>
+            </div>
+            <div class="project-box2">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Reboisasi </h3>
+                <label>Akar pohon dapat membantu penyerapan </label>
+            </div>
+            <div class="project-box2">
+                <i class="uil uil-award"></i>
+                <h3>Edukasi dan Penyuluhan</h3>
+                <label>Edukasi tentang pengelolaan sampah,dll</label>
+            </div>
+          </div>
+       </section>
+
+       <section class="section" id="projects">
+        <div class="top-header">
+            <h1>Cek Cuaca</h1>
+            <span>Dapatkan informasi cuaca terlengkap untuk kota pilihan Anda</span>
+        </div>
+        <div class="row" style="justify-content: center;">
+            <div class="col2">
+                <div class="cuaca">
+                    <form>
+                        <input type="text" id="name" placeholder="Cari kota..." autocomplete="off">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <div class="result">
+                        <figure class="name">
+                            <figcaption>Jakarta</figcaption> 
+                            <img src="https://flagsapi.com/ID/shiny/32.png" alt="flag">
+                        </figure>
+            
+                        <figure class="temperature">
+                            <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weather-icon">
+                            <figcaption>
+                                <span id="temp">28</span>
+                                <sup>o</sup>C
+                            </figcaption> 
+                        </figure>
+                        <p class="description">Loading weather data...</p>
+                        
+                        <!-- Main Weather Info -->
+                        <div class="weather-main-info">
+                            <ul>
+                                <li>
+                                    <span2>Clouds</span2>
+                                    <i class="fa-solid fa-cloud"></i>
+                                    <span2 id="clouds">--</span2>%
+                                </li>
+                                <li>
+                                    <span2>Humidity</span2>
+                                    <i class="fa-solid fa-droplet"></i>
+                                    <span2 id="humidity">--</span2>%
+                                </li>
+                                <li>
+                                    <span2>Pressure</span2>
+                                    <i class="fa-solid fa-gauge"></i>
+                                    <span2 id="pressure">--</span2>hPa
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Additional Details -->
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-wind"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Kecepatan Angin</span>
+                                    <span class="detail-value" id="wind-speed">-- m/s</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Visibilitas</span>
+                                    <span class="detail-value" id="visibility">-- km</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-thermometer-half"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Suhu Terasa</span>
+                                    <span class="detail-value" id="feels-like">-- °C</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-up-long"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Suhu Max</span>
+                                    <span class="detail-value" id="temp-max">-- °C</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-down-long"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Suhu Min</span>
+                                    <span class="detail-value" id="temp-min">-- °C</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-water"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Koordinat</span>
+                                    <span class="detail-value" id="coordinates">--</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+       
+
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+       <script type="text/javascript">
+        var submitted = false;
+        function handleSubmit() {
+            submitted = true;
+        }
+    
+        function showSuccessNotification() {
+            if (submitted) {
+                alert("Tanggapan Anda berhasil dikirim! Terima kasih atas Laporan / masukan Anda,Kami akan segera merespons");
+                window.location = 'index.html'; 
+            }
+        }
+    </script>
+    
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="showSuccessNotification()"></iframe>
+    
+    <section class="section" id="hubungi">
+        <div class="top-header">
+            <h1>Form Aduan Banjir</h1>
+            <span>Silahkan isi untuk saran maupun untuk aduan banjir</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: danielxogood@gmail.com</p>
+                    <p><i class="uil uil-phone"></i> Tel: +62 813 2372 2338</p>
+                </div>
+            </div>
+            <div class="col">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfUF1yTLPd4NIG8k-KYLpSWdNGE3A_i4NxecRBFmlipOuM9Jw/formResponse" method="POST" target="hidden_iframe" onsubmit="handleSubmit()">
+                    <div class="form-control">
+                        <div class="form-inputs">
+                            <input type="text" class="input-field" placeholder="Name" name="entry.1897786567" required>
+                            <input type="email" class="input-field" placeholder="Email" name="entry.1348692525" required>
+                        </div>
+                        <div class="text-area">
+                            <textarea placeholder="Message" name="entry.1680803058" required></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+      
+
+    </main>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Daniel Weather Web</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Cek Cuaca</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#hubungi">Hubungi</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+           
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Kelompok 5</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ----- Weather ----- -->
+
+    <script src="assets/js/app-simple.js"></script>
+
+    <!-- ----- Map Script (Safe) ----- -->
+    <script type="text/javascript">
+   
+    if (document.getElementById('map')) {
+        try {
+            let map = L.map('map').setView([0.789, 118.9213], 5);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            // Hanya dijalankan jika apiUrl tersedia
+            if (typeof apiUrl !== 'undefined') {
+                async function getData(){
+                    try {
+                        let response = await fetch(apiUrl);
+                        console.log(response);
+                    } catch(err) {
+                        console.error('Map data error:', err);
+                    }
+                }
+                getData();
+            }
+        } catch(err) {
+            console.log('Map tidak aktif - tidak ada elemen dengan ID "map"');
+        }
+    }
+    </script>
+    
+</body>
+</html>
