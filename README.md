@@ -140,13 +140,7 @@ Tugas_WEB/
 
 Website dioptimalkan untuk berbagai perangkat dengan breakpoint:
 
-- **Mobile Extra Small** (< 480px): Smartphone kecil
-- **Mobile Small** (480px - 640px): Smartphone medium
-- **Mobile Landscape** (640px - 768px): Smartphone horizontal
-- **Tablet Portrait** (768px - 900px): Tablet vertikal
-- **Tablet Landscape** (900px - 1024px): Tablet horizontal
-- **Desktop** (1024px - 1440px): Desktop standar
-- **Large Desktop** (1440px+): Desktop besar
+{Masih dalam Pengembangan}
 
 ### Optimasi Responsive:
 
@@ -210,19 +204,7 @@ Website mengambil 12 field data dari API:
 11. Temp Min (main.temp_min)
 12. Coordinates (coord.lat, coord.lon)
 
-## Penggunaan Edukasi
 
-Website ini cocok untuk:
-
-- Media edukasi tentang bencana banjir
-- Materi pembelajaran sekolah/kampus
-- Portal informasi komunitas
-- Dashboard monitoring cuaca
-- Sistem pelaporan kejadian banjir
-
-## Kontributor
-
-**Kelompok 5** - Tugas Web Development
 
 ### Developer
 
@@ -230,10 +212,4 @@ Website ini cocok untuk:
   - Email: danielxogood@gmail.com
   - Tel: +62 813 2372 2338
 
-## Lisensi
 
-Copyright © Kelompok 5 - All rights reserved
-
----
-
-**Website Siaga Banjir** - Bersama mencegah dan menghadapi bencana banjir untuk masa depan yang lebih baik
