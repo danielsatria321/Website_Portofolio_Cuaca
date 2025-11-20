@@ -1,6 +1,6 @@
 # Sistem Informasi Bencana Banjir - Siaga Banjir
 
-Website informatif dan interaktif yang menyajikan informasi lengkap tentang bencana banjir di Indonesia, dilengkapi dengan fitur cek cuaca real-time dan sistem pelaporan untuk meningkatkan kesiapsiagaan masyarakat terhadap bencana banjir.
+Website informatif dan interaktif yang menyajikan informasi lengkap tentang bencana banjir di Indonesia, dilengkapi dengan fitur cek cuaca real-time dengan API dan sistem pelaporan untuk meningkatkan kesiapsiagaan masyarakat terhadap bencana banjir.
 
 ## Deskripsi Proyek
 
