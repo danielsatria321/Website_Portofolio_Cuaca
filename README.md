@@ -4,7 +4,7 @@ Website informatif dan interaktif yang menyajikan informasi lengkap tentang benc
 
 ## Deskripsi Proyek
 
-Website ini dirancang sebagai portal informasi lengkap mengenai bencana banjir, mencakup edukasi, statistik, mitigasi, dan tools praktis untuk membantu masyarakat dalam mengantisipasi dan menghadapi bencana banjir. Proyek ini dikembangkan dengan HTML5, CSS3, dan JavaScript vanilla untuk memberikan pengalaman pengguna yang responsif di berbagai perangkat.
+Website ini dirancang sebagai portal informasi lengkap mengenai bencana banjir, mencakup edukasi, statistik, mitigasi, dan tools praktis untuk membantu masyarakat dalam mengantisipasi dan menghadapi bencana banjir. Proyek ini dikembangkan dengan HTML5, CSS3, dan JavaScript vanilla untuk memberikan pengalaman pengguna.
 
 ## Fitur Utama
 
