@@ -1,12 +1,12 @@
 let id = '9505fd1df737e20152fbd78cdb289b6a';
 let url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' + id;
 
-// Element references - akan di-set saat DOMContentLoaded
+
 let form, valueSearch, city, temperature, description;
 let clouds, humidity, pressure, weatherContainer;
 let windSpeed, visibility, feelsLike, tempMax, tempMin, coordinates, tempDisplay;
 
-// Fungsi untuk update weather data
+// update weather data
 function updateWeatherUI(data) {
     if(data.cod != 200) return;
     
@@ -69,11 +69,11 @@ function searchWeather(cityName) {
         });
 }
 
-// Initialize saat DOM ready
+// Initialize pas DOM ready
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM Ready - Getting elements...');
     
-    // Get all elements
+
     form = document.querySelector(".cuaca form");
     valueSearch = document.getElementById('name');
     city = document.querySelector('.name');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     coordinates = document.getElementById('coordinates');
     tempDisplay = document.getElementById('temp');
     
-    // Log elements for debugging
+    // DEBUGG
     console.log('Elements found:');
     console.log('- Form:', !!form);
     console.log('- Input:', !!valueSearch);
@@ -104,13 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('- Temp Min:', !!tempMin);
     console.log('- Coordinates:', !!coordinates);
     
-    // Check if all critical elements exist
+ 
     if(!form || !valueSearch || !city || !temperature || !description) {
         console.error('Critical elements missing!');
         return;
     }
     
-    // Add form submit listener
+
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         if(valueSearch.value.trim()) {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Load default city
+    //defaulte city
     console.log('Loading default city: Jakarta');
     searchWeather('Jakarta');
 });

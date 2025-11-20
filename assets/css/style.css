@@ -194,17 +194,6 @@ nav:hover {
     color: var(--first-color);
     transition: .3;
 }
-.active-link::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translate(-50%, -50%);
-    width: 5px;
-    height: 5px;
-    background: var(--first-color);
-    border-radius: 50%;
-}
 
 
 /* ----- WRAPPER DESIGN ----- */
@@ -1417,6 +1406,5 @@ span.text{
         transform: scale(1);
     }
 }
-
 
 

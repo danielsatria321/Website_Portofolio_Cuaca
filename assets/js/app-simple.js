@@ -1,6 +1,4 @@
-// ============================================
-// WEATHER APP - SIMPLIFIED VERSION
-// ============================================
+
 
 const API_KEY = '9505fd1df737e20152fbd78cdb289b6a';
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' + API_KEY;
@@ -30,7 +28,7 @@ function initElements() {
     // Log elements status
     for(let key in weatherElements) {
         if(!weatherElements[key]) {
-            console.warn(`❌ Element '${key}' not found`);
+            console.warn(` Element '${key}' not found`);
         } else {
             console.log(`✓ Element '${key}' found`);
         }
@@ -110,7 +108,7 @@ function searchWeather(cityName) {
         });
 }
 
-// Initialize when DOM is ready
+
 if(document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
